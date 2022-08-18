@@ -77,11 +77,9 @@
 			</div>
 		</div><br><br>
 		<!--<div id="spotify" class="div-spotify" style="text-align: center; border: 3px solid #58da76; padding: 10px; background-image: url('./src/img/jpg/spotify-banner.jpg'); margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
-			<?php include('./includes/spotify.php') ?> // enlevez cette ligne si vous n'avez pas de profile spotify 
+			<?php include('./includes/spotify.php'); ?> // enlevez cette ligne si vous n'avez pas de profile spotify 
 		</div>--><br><br><br>
 	</main><br><br><br>
-	<footer style="text-align: center;">
-		Développé avec ❤️ par <a href="https://twitter.com/Cut0x_" style="color: cyan; text-decoration: none;" target="_blank" rel="noopener noreferrer">Cut0x</a> !
-	</footer>
+	<?php include('./includes/footer.php'); ?>
 </body>
 </html>
