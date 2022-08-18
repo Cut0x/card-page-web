@@ -2,5 +2,6 @@
 Voici un petit template d'une page de card (un peu comme LinkTree) !
 
 # C'est quoi le rendu ?
-Je vous invite à aller voir ce lien !
-<a href="https://legrincheux.alwaysdata.net">legrincheux.alwaysdata.net</a>
+Je vous invite à aller voir ce lien !<br>
+<button
+<a href="https://legrincheux.alwaysdata.net"><button>legrincheux.alwaysdata.net</button></a>
