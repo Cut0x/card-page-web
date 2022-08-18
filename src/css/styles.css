@@ -8,84 +8,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	scroll-behaviour: smooth;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-header a {
-	text-decoration: none;
-    color: white;
-}
-
-.logo {
-	margin: 0;
-	font-size: 1.45em;
-}
-
-.main-nav {
-	margin-top: 5px;
-
-}
-.logo a,
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
-    color: white;
-}
-
-.main-nav a {
-    color: white;
-	font-size: .99em;
-}
-
-.main-nav a:hover {
-    color: #a29b9b;
-}
-
-
-
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #434242;
-	background: linear-gradient(180deg, #8010DE, #8965A7);
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-
-    	.header{
-		    width: 80%;
-		    margin: 0 auto;
-		    max-width: 1150px;
-	    }
-	}
-}
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-}
+};
 
 .main {
   display: -ms-flexbox;
@@ -102,13 +25,15 @@ header a {
   -ms-flex-pack: center;
   justify-content: center;
   align-items: center;
-}
+};
+
 .nav-item {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
   text-decoration: none;
-}
+};
+
 .nav-link-text {
   font-size: 0.675rem;
   line-height: 1.25rem;
@@ -122,7 +47,7 @@ header a {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
-}
+};
 
 .nav-links {
   color: rgba(255, 51, 51, 0.8);
@@ -138,7 +63,8 @@ header a {
     color: #eee !important;
     transform: scaleX(1.1) scaleY(1.1);
   }
-}
+};
+
 .credits {
   position: absolute;
   right: 0;
@@ -151,8 +77,8 @@ header a {
     font-family: Degular, sans-serif;
     text-decoration: none;
   }
-}
+};
 
 .div-spotify {
 	border: 500px;
-}
+};
