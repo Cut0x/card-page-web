@@ -1,4 +1,4 @@
-# Card fait en HTML5 et CSS3
+# Card fait en HTML5, PHP et CSS3
 Voici un petit template d'une page de card (un peu comme LinkTree) !
 
 # Comment configurer ?
