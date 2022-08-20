@@ -1,6 +1,10 @@
+<?php
+include('./config.php');
+?>
+
 <iframe
         scrolling="no"
-        src="votre_lien_spotify_ici"
+        src="<?php echo $spotify; ?>"
         data-testid="spotify-preview--iframe"
         height="392"
         style="border-radius: 30px; width: 100%;"
