@@ -2,7 +2,7 @@
 Voici un petit template d'une page de card (un peu comme LinkTree) !
 
 # Comment configurer ?
-### Tout se trouve dans le fichier `./config.php` !
+### Tout se trouve dans le fichier <a href="https://github.com/Cut0x/card-page-web/blob/main/config.php">`./config.php`</a> !
 Vous avez juste à remplacer "null" par les informations qui vous représentes
 ```php
 <?php
