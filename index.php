@@ -63,6 +63,15 @@ include('./config.php');
   					</a>
 				<?php }; ?>
 				
+				<?php if ($discord !== null) { ?>
+  					<a href="https://discord.gg/<?php echo $tiktok; ?>" class="nav-item" targer="_blank">
+    					<div class="nav-links">
+      						<img src="./src/img/svg/discord-logo.svg" alt="">
+    					</div>
+    					<span class="nav-link-text">Discord</span>
+  					</a>
+				<?php }; ?>
+				
 				<?php if ($tiktok !== null) { ?>
   					<a href="https://tiktok.com/@<?php echo $tiktok; ?>" class="nav-item" targer="_blank">
     					<div class="nav-links">
@@ -104,7 +113,8 @@ include('./config.php');
 				<?php include('./includes/twitter.php'); ?> 
 			</div>
 		<?php }; ?>
-	</main><br><br><br>
+	</main><br><br>
+	<br><br><br>
 	<?php include('./includes/footer.php'); ?>
 </body>
 </html>
