@@ -6,13 +6,23 @@ Voici un petit template d'une page de card (un peu comme LinkTree) !
 Vous avez juste à remplacer "null" par les informations qui vous représentes
 ```php
 <?php
-$pseudo = null;
-$avatar = null;
-$description = null;
+$pseudo = null; 
+$avatar = null; 
+$description = null; 
 
-if (strlen($pseudo) == null) $pseudo = "VotrePseudo";
-if (strlen($avatar) == null) $avatar = "";
-if (strlen($description) == null) $description = "Votre description"
+if (strlen($pseudo) == null) $pseudo = "Votre Pseudo";
+if (strlen($avatar) == null) $avatar = "webp/default_user.webp";
+if (strlen($description) == null) $description = "Votre description";
+
+$twitter = null;
+$github = null;
+$twitch = null;
+$youtube = null;
+$instagram = null;
+$tiktok = null;
+$spotify = null;
+$discord = null;
+$bandcamp = null;
 ?>
 ```
 
