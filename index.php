@@ -8,7 +8,7 @@ include('./config.php');
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $pseudo; ?> !!</title>
-	<link rel="shortcut icon" href="./src/img/<?php echo $avatar; ?>" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo $avatar; ?>" type="image/x-icon">
 
 	<link rel="stylesheet" href="./src/css/styles.css">
 </head>
@@ -17,14 +17,16 @@ include('./config.php');
 		<div id="a-propos">
 			<!-- AVATAR ET DESCRIPTION -->
 			<div id="avatar" class="pdp" style="text-align: center;">
-				<img src="./src/img/<?php echo $avatar; ?>" alt="" style="width: 250px; border-radius: 150px;">
+				<img src="<?php echo $avatar; ?>" alt="" style="width: 250px; border-radius: 150px;">
 				<br>
 				<h1><?php echo $pseudo; ?></h1>
 				<br>
 			</div>
-			<p style="text-align: center;" id="descrip">
-				<?php echo $description; ?>
-			</p>
+			<div style="text-align: center; border: 3px solid #434748; color: black; padding: 10px; background: #434748; margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
+				<p style="text-align: center;" id="descrip">
+					<?php echo $description; ?>
+				</p>
+			</div>
 			<!-- LIENS DE VOS RESEAUX -->
 			<div id="reseaux" class="main">
 				<?php if ($twitter !== null) { ?>
