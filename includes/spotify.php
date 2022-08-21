@@ -1,3 +1,5 @@
+<!-- Il vous faut un lien qui s'affiche comme ça : https://open.spotify.com/artist/5mqXPfoK5dsoHB6L8fEc8I -->
+
 <?php
 include('./config.php');
 ?>
