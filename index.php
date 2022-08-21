@@ -100,12 +100,12 @@ include('./config.php');
 				<?php }; ?>
 			</div>
 		</div>
-		<?php if ($spotify !== null) { ?>
+		<!--<?php if ($spotify !== null) { ?>
 			<br><br>
 			<div id="spotify" class="div-spotify" style="text-align: center; border: 3px solid #58da76; padding: 10px; background: #58da76; margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
 				<?php include('./includes/spotify.php'); ?>
 			</div>
-		<?php }; ?>
+		<?php }; ?>-->
 		
 		<?php if ($twitter !== null) { ?>
 			<br><br>
