@@ -14,7 +14,7 @@ if (strlen($pseudo) == null) $pseudo = "Votre Pseudo";
 if (strlen($avatar) == null) $avatar = "webp/default_user.webp";
 if (strlen($description) == null) $description = "Votre description";
 
-$twitter = null;
+$twitter = null; // exemple : "@Cut0x_" -> il ne faut pas oublier de mettre votre information entre "" !!
 $github = null;
 $twitch = null;
 $youtube = null;
