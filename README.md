@@ -1,6 +1,8 @@
 # Card fait en HTML5, PHP et CSS3
 Voici un petit template d'une page de card (un peu comme LinkTree) !
 
+Besoin d'aide ? <a href="https://github.com/Cut0x/card-page-web#pour-de-laide">CLIQUE ICI !</a>
+
 # Comment configurer ?
 ### Tout se trouve dans le fichier `./config.php` !
 Vous avez juste à remplacer "null" par les informations qui vous représentes
