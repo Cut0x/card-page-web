@@ -22,11 +22,11 @@ include('./config.php');
 				<h1><?php echo $pseudo; ?></h1>
 				<br>
 			</div>
-			<div style="text-align: center; border: 3px solid #434748; color: black; padding: 10px; background: #434748; margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
+			<div style="text-align: center; border: 3px solid #434748; color: white; padding: 10px; background: #434748; margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
 				<p style="text-align: center;" id="descrip">
 					<?php echo $description; ?>
 				</p>
-			</div>
+			</div><br><br>
 			<!-- LIENS DE VOS RESEAUX -->
 			<div id="reseaux" class="main">
 				<?php if ($twitter !== null) { ?>
@@ -102,12 +102,6 @@ include('./config.php');
 				<?php }; ?>
 			</div>
 		</div>
-		<!--<?php if ($spotify !== null) { ?>
-			<br><br>
-			<div id="spotify" class="div-spotify" style="text-align: center; border: 3px solid #58da76; padding: 10px; background: #58da76; margin: auto; width: 50%; background-repeat: no-repeat; background-size: 1000px; border-radius: 50px;">
-				<?php include('./includes/spotify.php'); ?>
-			</div>
-		<?php }; ?>-->
 		
 		<?php if ($twitter !== null) { ?>
 			<br><br>
