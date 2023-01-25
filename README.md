@@ -28,9 +28,5 @@ $bandcamp = null;
 ?>
 ```
 
-# C'est quoi le rendu ?
-Je vous invite à aller voir ce lien !<br>
-<a href="https://legrincheux.alwaysdata.net" target="_blank"><button>legrincheux.alwaysdata.net</button></a>
-
 # Pour de l'aide
 Je vous invite à me contacter sur mon <a href="https://twitter.com/Cut0x_" target="_blank">Twitter</a> par message privé, ou alors, directement sur mon <a>Discord</a> en envoyant un message privé au bot **Bat Bot**.
