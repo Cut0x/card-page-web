@@ -1,6 +1,7 @@
 :root {
     --dark: #23272A;
-    --blue: #;
+    --box-color: #17181a;
+    --blue: #282caf;
 }
 
 @font-face {
@@ -21,15 +22,30 @@
 
 body {
     background-color: #333;
-    color: white
+    color: white;
+    font-family: Century Gothic;
 }
 
 .profile {
     text-align: center;
     padding: 12px;
     font-size: x-large;
+    background-color: var(--dark);
+    border-radius: 20px;
 }
 
 .profile img {
     width: 200px;
+}
+
+.profile .bio {
+    display: flex;
+    justify-content: center;
+}
+
+.profile .bio .content {
+    background-color: var(--box-color);
+    padding: 20px;
+    border-radius: 23px;
+    width: 500px;
 }
