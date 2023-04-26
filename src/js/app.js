@@ -1,15 +1,18 @@
+let head = new Vue({
+    el: "#vue-managed",
+    data: {
+        logo: config.PICTURE,
+        username: config.USERNAME,
+    }
+});
+
 let body = new Vue({
     el: '.profile',
     data: {
         username: config.USERNAME,
-        profile_picture: config.PICTURE,
+        logo: config.PICTURE,
         description: config.DESCRIPTION,
-    }
-});
-
-let head = new Vue({
-    el: "#vue-managed",
-    data: {
-        username: config.USERNAME,
+        discord: config.DISCORD,
+        socials: config.SOCIAL,
     }
 });

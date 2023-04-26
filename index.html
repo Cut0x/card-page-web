@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="vue-managed">{{ username }}</title>
 
-    <link rel="shortcut icon" href="./src/assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" v-bind:href="logo" type="image/x-icon">
 
     <link rel="stylesheet" href="./src/css/style.css">
     <script src="https://kit.fontawesome.com/6e5392ed44.js" crossorigin="anonymous"></script>
@@ -15,8 +15,8 @@
 </head>
 <body>
     <div class="profile">
+        <img class="profile-picture" v-bind:src="logo" alt="Photo de profile" />
         <h1 class="name">{{ username }}</h1>
-        <img class="profile-picture" v-bind:src="profile_picture" alt="Profile Picture" />
         
         <div class="bio">
             <p v-html="description"></p>
