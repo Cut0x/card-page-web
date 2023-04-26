@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
-    <div id="profile">
+    <div class="profile">
         <h1 class="name">{{ username }}</h1>
         <img class="profile-picture" v-bind:src="profile_picture" alt="Profile Picture" />
-        <p v-html="description"></p>
+        
+        <div class="bio">
+            <p v-html="description"></p>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
