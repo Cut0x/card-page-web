@@ -10,6 +10,7 @@ let body = new Vue({
     el: '.profile',
     data: {
         username: config.USERNAME,
+        tag: config.TAG,
         logo: config.PICTURE,
         description: config.DESCRIPTION,
         socials: config.SOCIAL,

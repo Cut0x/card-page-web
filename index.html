@@ -9,14 +9,13 @@
     <link rel="shortcut icon" v-bind:href="logo" type="image/x-icon">
 
     <link rel="stylesheet" href="./src/css/style.css">
-    <script src="https://kit.fontawesome.com/6e5392ed44.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="profile">
         <img class="profile-picture" v-bind:src="logo" alt="Photo de profile" />
-        <h1 class="name">{{ username }}</h1>
+        <h1 class="name">{{ username }}#<span class="tag-color">{{ tag }}</span></h1>
         
         <div class="bio">
             <div class="content">

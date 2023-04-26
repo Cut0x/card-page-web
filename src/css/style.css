@@ -1,7 +1,10 @@
 :root {
+    --background-color: #333;
     --dark: #23272A;
     --box-color: #17181a;
-    --blue: #282caf;
+    --blue-button: #282caf;
+    --blue-button-hover: #383dc4;
+    --blurple: #5865F2;
 }
 
 @font-face {
@@ -21,7 +24,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: var(--background-color);
     color: white;
     font-family: Century Gothic;
 }
@@ -38,8 +41,14 @@ body {
     border-radius: 20px;
 }
 
+.profile .tag-color {
+    color: var(--blurple)
+}
+
 .profile img {
     width: 200px;
+    height: 200px;
+    border-radius: 200px;
 }
 
 .profile .bio {
@@ -66,12 +75,12 @@ body {
     margin: 5px;
     color: white;
     border-radius: 24px;
-    background-color: var(--blue);
+    background-color: var(--blue-button);
     font-size: 50px;
 }
 
 .profile .bottom-part a:hover {
-    background-color: #383dc4;
+    background-color: var(--blue-button-hover);
     box-shadow: 4px 4px 4px black;
 }
 
@@ -107,7 +116,7 @@ body {
 }
 
 .projets .box .partie a {
-    background-color: var(--blue);
+    background-color: var(--blue-button);
     color: white;
     text-decoration: none;
     padding: 6px;
@@ -115,7 +124,7 @@ body {
 }
 
 .projets .box .partie a:hover {
-    background-color: #383dc4;
+    background-color: var(--blue-button-hover);
 }
 
 @media screen and (max-width: 850px) {
