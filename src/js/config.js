@@ -17,15 +17,15 @@ const config = {
     SOCIAL: [
         {
             class_name: "bi bi-twitter",
-            link: "https://twitter.com/Cut0x_"
+            link: "https://twitter.com/discord"
         },
         {
             class_name: "bi bi-github",
-            link: "https://github.com/Cut0x"
+            link: "https://github.com/discordjs"
         },
         {
             class_name: "bi bi-twitch",
-            link: "https://twitch.tv/cut0x"
+            link: "https://twitch.tv/discord"
         },
     ]
 };
