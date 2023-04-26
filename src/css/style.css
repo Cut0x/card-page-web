@@ -26,6 +26,10 @@ body {
     font-family: Century Gothic;
 }
 
+.space {
+    margin-bottom: 20px;
+}
+
 .profile {
     text-align: center;
     padding: 12px;

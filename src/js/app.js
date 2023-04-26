@@ -1,5 +1,5 @@
 let head = new Vue({
-    el: "#vue-managed",
+    el: "#vue-title",
     data: {
         logo: config.PICTURE,
         username: config.USERNAME,
@@ -12,7 +12,7 @@ let body = new Vue({
         username: config.USERNAME,
         logo: config.PICTURE,
         description: config.DESCRIPTION,
-        discord: config.DISCORD,
+        projets: config.PROJECTS,
         socials: config.SOCIAL,
     }
 });

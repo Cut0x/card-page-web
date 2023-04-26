@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="vue-managed">{{ username }}</title>
+    <title id="vue-title">{{ username }}</title>
 
     <link rel="shortcut icon" v-bind:href="logo" type="image/x-icon">
 
@@ -23,6 +23,8 @@
                 <p v-html="description"></p>
             </div>
         </div>
+
+        <div class="space"></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>

@@ -4,10 +4,7 @@ const config = {
     PICTURE: "https://cdn.discordapp.com/attachments/914271938359210045/1100529322860748800/github.png",
     ID: "574544938440851466",
     
-    DISCORD: {
-        name: "",
-        logo: "",
-        link: ""
+    PROJECTS: {
     },
 
     SOCIAL: [
