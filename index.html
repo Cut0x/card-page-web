@@ -25,6 +25,11 @@
         </div>
 
         <div class="space"></div>
+        <div class="bottom-part">
+            <div v-for="social in socials">
+                <a v-bind:class="social.class_name" v-bind:href="social.link"></a>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>

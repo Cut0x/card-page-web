@@ -53,3 +53,24 @@ body {
     border-radius: 23px;
     width: 500px;
 }
+
+.profile .bottom-part {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.profile .bottom-part a {
+    text-decoration: none;
+    padding: 15px 15px;
+    margin: 5px;
+    color: white;
+    border-radius: 24px;
+    background-color: var(--blue);
+    font-size: 50px;
+}
+
+.profile .bottom-part a:hover {
+    background-color: #383dc4;
+    box-shadow: 4px 4px 4px black;
+}

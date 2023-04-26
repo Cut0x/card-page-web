@@ -12,7 +12,13 @@ let body = new Vue({
         username: config.USERNAME,
         logo: config.PICTURE,
         description: config.DESCRIPTION,
-        projets: config.PROJECTS,
         socials: config.SOCIAL,
+    }
+});
+
+let projects = new Vue({
+    el: '.projets',
+    data: {
+        projets: config.PROJECTS
     }
 });
