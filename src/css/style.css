@@ -85,11 +85,11 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    min-width: 300px;
     background-color: var(--box-color);
     padding: 10px;
-    width: 400px;
+    font-size: 20px;
     border-radius: 12px;
-    font-size: x-large;
 }
 
 .projets .box:hover {
@@ -97,7 +97,6 @@ body {
 }
 
 .projets .box .partie {
-    width: 130px;
     border-radius: 130px;
     padding: 10px;
 }
@@ -117,4 +116,15 @@ body {
 
 .projets .box .partie a:hover {
     background-color: #383dc4;
+}
+
+@media screen and (max-width: 850px) {
+    .projets .box {
+        max-width: 350px;
+        font-size: 15px;
+    }
+    
+    .projets .box .partie a {
+        font-size: 30px;
+    }
 }

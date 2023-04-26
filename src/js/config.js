@@ -9,7 +9,7 @@ const config = {
             id: "p1",
             img: "https://cdn.discordapp.com/attachments/914271938359210045/980928769588072478/LOGO-DEVORION-1.png",
             url: "https://discord.com/",
-            name: "DevOrion"
+            name: "DevOron"
         },
     ],
 
