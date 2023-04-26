@@ -47,3 +47,8 @@ Je vous invite à me contacter sur mon <a href="https://twitter.com/Cut0x_" targ
 
 # Apperçu
 ![image](https://user-images.githubusercontent.com/71967731/234621798-6f3f8f61-9a3c-46a8-894f-ac3cede07d3a.png)
+
+# Crédit
+Développé et designé avec coeur par <a href="https://twitter.com/Cut0x_">Cut0x</a>
+<br>
+Inspiré de <a href="https://github.com/IchiiDev/profile">IchiiDev</a>
