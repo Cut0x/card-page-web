@@ -34,7 +34,22 @@
     </div>
 
     <div class="projets">
-        
+        <div v-for="projet in projets">
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+
+            <div class="box">
+                <div class="partie a">
+                    <img v-bind:src="projet.img" alt="">
+                </div>
+
+                <div class="partie">
+                    <h2>{{ projet.name }}</h2>
+                    <a v-bind:href="projet.url" class="go">Aller voir !</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
