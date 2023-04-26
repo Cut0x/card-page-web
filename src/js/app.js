@@ -21,4 +21,4 @@ let head = new Vue({
     data: {
         username: config.USERNAME,
     }
-})
+});
