@@ -1,6 +1,6 @@
-Here is a small template for a card page (a bit like LinkTree)!
+Here is a small template for a card page.
 
-Need help? <a href="https://github.com/Cut0x/card-page-web#pour-de-laide">CLICK HERE!</a>
+Need help? <a href="https://github.com/Cut0x/card-page-web#for-help">CLICK HERE!</a>
 
 # Resources
 `BootstrapIcons@1.10.5`, `HTML5`, `CSS3`, `JavaScript`
@@ -10,51 +10,51 @@ Go to the **config.js** file (`./src/js/config.js`) and put your information the
 ```js
 const config = {
     user: {
-        name: "Jean Dupont",
-        tagline: "Web Developer & Designer",
-        avatar: "https://via.placeholder.com/150"
+      name: "Your Name",
+      tagline: "Your Tagline",
+      avatar: "https://app.akirasteam.com/uploads/pdp_default.png"
     },
     
-    about: "I am a passionate developer specializing in creating modern and clean web experiences. I love combining technology and design to create elegant interfaces.",
+    about: "Your bio goes here.",
     
     socialNetworks: [
-        {
-            name: "GitHub",
-            link: "https://github.com/jeandupont",
-            icon: "bi-github"
-        },
-        {
-            name: "LinkedIn",
-            link: "https://linkedin.com/in/jeandupont",
-            icon: "bi-linkedin"
-        },
-        {
-            name: "Twitter",
-            link: "https://twitter.com/jeandupont",
-            icon: "bi-twitter"
-        }
+      {
+        name: "Discord",
+        link: "https://discord.gg/",
+        icon: "bi-github"
+      },
+      {
+        name: "GitHub",
+        link: "https://github.com/",
+        icon: "bi-github"
+      },
+      {
+        name: "Twitter",
+        link: "https://twitter.com/",
+        icon: "bi-twitter"
+      }
     ],
     
     projects: [
-        {
-            title: "Modern Project",
-            description: "An innovative web application using the latest technologies.",
-            link: "https://example.com/projet-moderne"
-        },
-        {
-            title: "Clean Project",
-            description: "A minimalist site with an intuitive user interface.",
-            link: "https://example.com/projet-epure"
-        },
-        {
-            title: "Responsive Project",
-            description: "An adaptive design for all platforms.",
-            link: "https://example.com/projet-responsive"
-        }
+      {
+        title: "Modern Project",
+        description: "Modern project description.",
+        link: "https://example.com/modern-project"
+      },
+      {
+        title: "Clean Project",
+        description: "Clean project description.",
+        link: "https://example.com/clean-project"
+      },
+      {
+        title: "Responsive Project",
+        description: "Responsive project description.",
+        link: "https://example.com/responsive-project"
+      }
     ],
     
-    /* THEME CONFIG */
-};  
+    /* DARK THEME */
+};
 ```
 
 # For help
