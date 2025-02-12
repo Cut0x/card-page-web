@@ -12,7 +12,7 @@ const config = {
     user: {
       name: "Your Name",
       tagline: "Your Tagline",
-      avatar: "https://app.akirasteam.com/uploads/pdp_default.png"
+      avatar: "[https://app.akirasteam.com/uploads/pdp_default.png](https://placehold.co/150.png?text=Avatar&font=roboto)"
     },
     
     about: "Your bio goes here.",
@@ -21,7 +21,7 @@ const config = {
       {
         name: "Discord",
         link: "https://discord.gg/",
-        icon: "bi-github"
+        icon: "bi-discord"
       },
       {
         name: "GitHub",
