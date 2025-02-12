@@ -2,7 +2,7 @@ const config = {
     user: {
       name: "Your Name",
       tagline: "Your Tagline",
-      avatar: "https://app.akirasteam.com/uploads/pdp_default.png"
+      avatar: "https://placehold.co/150.png?text=Avatar&font=roboto"
     },
     
     about: "Your bio goes here.",
