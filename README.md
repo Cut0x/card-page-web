@@ -1,54 +1,68 @@
-# Template site card
-Voici un petit template d'une page de card (un peu comme LinkTree) !
+Here is a small template for a card page (a bit like LinkTree)!
 
-Besoin d'aide ? <a href="https://github.com/Cut0x/card-page-web#pour-de-laide">CLIQUE ICI !</a>
+Need help? <a href="https://github.com/Cut0x/card-page-web#pour-de-laide">CLICK HERE!</a>
 
-# Ressources
-`Vue@2`, `BootstrapIcons@1.10.4`, `HTML5`, `CSS3`
+# Resources
+`BootstrapIcons@1.10.5`, `HTML5`, `CSS3`, `JavaScript`
 
-# Comment configurer ?
-Dirigez vous sur le fichier **config.js** (`./src/js/config.js`) et mettez y vos informations !
+# How to configure?
+Go to the **config.js** file (`./src/js/config.js`) and put your information there!
 ```js
 const config = {
-    USERNAME: "Username",
-    TAG: "0000",
-    DESCRIPTION: "Votre description",
-    PICTURE: "url_de_votre_pdp",
-    ID: "votre_id",
+    user: {
+        name: "Jean Dupont",
+        tagline: "Web Developer & Designer",
+        avatar: "https://via.placeholder.com/150"
+    },
     
-    PROJECTS:  [
+    about: "I am a passionate developer specializing in creating modern and clean web experiences. I love combining technology and design to create elegant interfaces.",
+    
+    socialNetworks: [
         {
-            id: "p1",
-            img: "url_de_la_pdp_du_projet",
-            url: "url_du_projet",
-            name: "nom_du_projet"
+            name: "GitHub",
+            link: "https://github.com/jeandupont",
+            icon: "bi-github"
         },
+        {
+            name: "LinkedIn",
+            link: "https://linkedin.com/in/jeandupont",
+            icon: "bi-linkedin"
+        },
+        {
+            name: "Twitter",
+            link: "https://twitter.com/jeandupont",
+            icon: "bi-twitter"
+        }
     ],
-
-    SOCIAL: [
+    
+    projects: [
         {
-            class_name: "bi bi-twitter",
-            link: "https://twitter.com/discord"
+            title: "Modern Project",
+            description: "An innovative web application using the latest technologies.",
+            link: "https://example.com/projet-moderne"
         },
         {
-            class_name: "bi bi-github",
-            link: "https://github.com/discordjs"
+            title: "Clean Project",
+            description: "A minimalist site with an intuitive user interface.",
+            link: "https://example.com/projet-epure"
         },
         {
-            class_name: "bi bi-twitch",
-            link: "https://twitch.tv/discord"
-        },
-    ]
-};
+            title: "Responsive Project",
+            description: "An adaptive design for all platforms.",
+            link: "https://example.com/projet-responsive"
+        }
+    ],
+    
+    /* THEME CONFIG */
+};  
 ```
 
-# Pour de l'aide
-Je vous invite à me contacter sur mon <a href="https://twitter.com/Cut0x_" target="_blank">Twitter</a> ou mon <a href="https://instagram.com/valloic_" target="_blank">Instagram</a> par message privé.
+# For help
+I invite you to contact me on my <a href="https://twitter.com/cut0x_" target="_blank">Twitter</a> or on my <a href="https://valloic.dev/pages/contact" target="_blank">contact page</a> by private message.
 
-# Apperçu
-![image](https://user-images.githubusercontent.com/71967731/234621798-6f3f8f61-9a3c-46a8-894f-ac3cede07d3a.png)
+# Preview
+![](src/img/image.png)
 
-# Crédit
-Développé et designé avec coeur par <a href="https://twitter.com/Cut0x_">Cut0x</a>
+# Credit
+Developed and designed with ❤️ by <a href="https://valloic.dev/">V Loïc (aka Cut0x)</a>.
 <br>
-Inspiré de <a href="https://github.com/IchiiDev/profile">IchiiDev</a>

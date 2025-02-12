@@ -1,139 +1,158 @@
+/* Dark theme variables */
 :root {
-    --background-color: #333;
-    --dark: #23272A;
-    --box-color: #17181a;
-    --blue-button: #282caf;
-    --blue-button-hover: #383dc4;
-    --blurple: #5865F2;
+    --background: #121212;
+    --card-background: #1e1e1e;
+    --accent-color: #bb86fc;
+    --text-color: #ffffff;
+    --border-color: #333;
 }
 
-@font-face {
-    font-family: Bruno Ace SC;
-    src: url("../../fonts/Bruno_Ace_SC/BrunoAceSC-Regular.ttf");
-}
-
-@font-face {
-    font-family: Century Gothic;
-    src: url("../../fonts/07558_CenturyGothic.ttf");
-}
-
-@font-face {
-    font-family: KoHo;
-    src: url("../../fonts/KoHo/KoHo-SemiBold.ttf");
-    font-weight: 600;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--background-color);
-    color: white;
-    font-family: Century Gothic;
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
 }
 
-.space {
+/* Main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Main card */
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile section */
+.profile {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.profile {
-    text-align: center;
-    padding: 12px;
-    font-size: x-large;
-    background-color: var(--dark);
-    border-radius: 20px;
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 15px;
 }
 
-.profile .tag-color {
-    color: var(--blurple)
+.profile h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
+.profile p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
 }
 
-.profile .bio {
+/* Social networks */
+.social-networks {
     display: flex;
     justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.profile .bio .content {
-    background-color: var(--box-color);
-    padding: 20px;
-    border-radius: 23px;
-    width: 500px;
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.profile .bottom-part {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
+.social-icon:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
 }
 
-.profile .bottom-part a {
-    text-decoration: none;
-    padding: 15px 15px;
-    margin: 5px;
-    color: white;
-    border-radius: 24px;
-    background-color: var(--blue-button);
-    font-size: 50px;
-}
-
-.profile .bottom-part a:hover {
-    background-color: var(--blue-button-hover);
-    box-shadow: 4px 4px 4px black;
-}
-
-.projets {
+/* About section */
+.about {
+    margin-bottom: 30px;
     text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Projects section */
+.projects {
+    margin-top: 30px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Projects grid */
+.projects-container {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-.projets .box {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 400px;
-    background-color: var(--box-color);
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 12px;
+/* Project card */
+.project-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projets .box:hover {
-    box-shadow: 4px 4px 4px black;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
 }
 
-.projets .box .partie {
-    border-radius: 130px;
-    padding: 10px;
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
-.projets .box .partie img {
-    width: 130px;
-    border-radius: 130px;
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
-.projets .box .partie a {
-    background-color: var(--blue-button);
-    color: white;
+.project-link {
+    display: inline-block;
     text-decoration: none;
-    padding: 6px;
-    border-radius: 16px;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.projets .box .partie a:hover {
-    background-color: var(--blue-button-hover);
-}
-
-@media screen and (max-width: 850px) {
-    .projets .box {
-        max-width: 350px;
-        font-size: 15px;
-    }
-    
-    .projets .box .partie a {
-        font-size: 30px;
-    }
+.project-link:hover {
+    background: var(--accent-color);
+    color: var(--card-background);
 }
