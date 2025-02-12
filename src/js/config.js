@@ -11,7 +11,7 @@ const config = {
       {
         name: "Discord",
         link: "https://discord.gg/",
-        icon: "bi-github"
+        icon: "bi-discord"
       },
       {
         name: "GitHub",
