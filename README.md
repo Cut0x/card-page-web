@@ -30,7 +30,7 @@ A beautiful, responsive profile card template perfect for creating your own pers
 
 ## 🚀 Demo
 
-> **[Live Demo](https://cut0x.github.io/card-page-web/)** ← Click to see it in action!
+> **[Live Demo](https://card-page-web.vercel.app/)** ← Click to see it in action!
 
 ### Preview
 ![Profile Card Preview](src/img/image.png)
