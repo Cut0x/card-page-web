@@ -21,7 +21,7 @@ const config = {
         {
             name: "Twitter",
             link: "https://twitter.com/",
-            icon: "bi-x"
+            icon: "bi-twitter"
         },
         {
             name: "Instagram",
