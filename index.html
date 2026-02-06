@@ -1,97 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Profile</title>
-    
+    <title></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+    <div class="ambient">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <button class="theme-btn" id="themeBtn" title="Toggle theme">
+    <main class="app">
+        <section class="card">
+            <button class="theme-btn" id="themeBtn" title="Changer le theme" aria-label="Changer le theme">
                 <i class="bi bi-moon"></i>
             </button>
-            
-            <img id="avatar" class="avatar" src="" alt="Profile Avatar">
-            <h1 class="name" id="name"></h1>
-            <p class="tagline" id="tagline"></p>
-            
-            <div class="social-links" id="socialLinks"></div>
-            
-            <div class="links-container" id="linksContainer"></div>
-        </div>
-    </div>
 
-    <script src="./src/js/config.js"></script>
+            <div class="banner" id="banner">
+                <div class="banner-overlay"></div>
+            </div>
+
+            <div class="profile-top">
+                <img id="avatar" class="avatar" src="" alt="Profile Avatar">
+                <div class="identity">
+                    <h1 class="name" id="name"></h1>
+                    <div class="meta">
+                        <span class="handle" id="handle"></span>
+                        <span class="dot">•</span>
+                        <span class="status" id="status"></span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="panel about">
+                <h2>About</h2>
+                <p class="tagline" id="tagline"></p>
+            </section>
+
+            <section class="panel socials">
+                <h2>Socials</h2>
+                <div class="social-badges" id="socialLinks"></div>
+            </section>
+
+            <section class="panel projects">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <span class="count" id="projectCount"></span>
+                </div>
+                <div class="project-grid" id="projectsGrid"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="./config.js"></script>
     <script>
-        // Initialize the page with config data
         function initPage() {
-            // Basic info
             document.getElementById('name').textContent = config.user.name;
             document.getElementById('tagline').textContent = config.user.tagline;
             document.getElementById('avatar').src = config.user.avatar;
-            
-            // Social networks
+            document.title = config.user.name || 'Profile';
+
+            const handle = document.getElementById('handle');
+            handle.textContent = config.user.handle || '@handle';
+
+            const status = document.getElementById('status');
+            status.textContent = config.user.status || 'Disponible';
+
+            const banner = document.getElementById('banner');
+            banner.style.backgroundImage = `url('${config.user.banner}')`;
+
             const socialContainer = document.getElementById('socialLinks');
             socialContainer.innerHTML = '';
             config.socialNetworks.forEach(social => {
                 const link = document.createElement('a');
                 link.href = social.link;
                 link.target = '_blank';
-                link.className = 'social-link';
+                link.rel = 'noopener noreferrer';
+                link.className = 'social-badge';
                 link.title = social.name;
-                link.innerHTML = `<i class="${social.icon}"></i>`;
+                link.innerHTML = `<i class="bi ${social.icon}"></i><span>${social.name}</span>`;
                 socialContainer.appendChild(link);
             });
-            
-            // Project links
-            const linksContainer = document.getElementById('linksContainer');
-            linksContainer.innerHTML = '';
+
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = '';
             config.projects.forEach(project => {
-                const link = document.createElement('a');
-                link.href = project.link;
-                link.target = '_blank';
-                link.className = 'link';
-                link.innerHTML = `
-                    <div class="link-title">
-                        ${project.title}
-                        <i class="bi bi-arrow-right link-arrow"></i>
+                const card = document.createElement('a');
+                card.href = project.link;
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+                card.className = 'project-card';
+                const tags = Array.isArray(project.tags) && project.tags.length
+                    ? `<div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>`
+                    : '';
+                card.innerHTML = `
+                    <div class="project-head">
+                        <h3>${project.title}</h3>
+                        <i class="bi bi-arrow-up-right"></i>
                     </div>
-                    <div class="link-description">${project.description}</div>
+                    <p>${project.description}</p>
+                    ${tags}
                 `;
-                linksContainer.appendChild(link);
+                projectsGrid.appendChild(card);
             });
 
-            // Apply dark theme if configured
+            document.getElementById('projectCount').textContent = `${config.projects.length} projets`;
+
             if (config.darkTheme) {
                 applyDarkThemeColors();
             }
         }
 
-        // Theme management
         const themeBtn = document.getElementById('themeBtn');
         const body = document.body;
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         body.setAttribute('data-theme', savedTheme);
         updateThemeIcon(savedTheme);
 
         themeBtn.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
@@ -105,14 +145,13 @@
         function applyDarkThemeColors() {
             if (config.darkTheme && body.getAttribute('data-theme') === 'dark') {
                 const root = document.documentElement;
-                root.style.setProperty('--bg-dark', config.darkTheme.background || 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)');
-                root.style.setProperty('--card-dark', config.darkTheme.cardBackground || 'rgba(26, 26, 46, 0.95)');
-                root.style.setProperty('--accent', config.darkTheme.accentColor || '#667eea');
-                root.style.setProperty('--text-dark', config.darkTheme.textColor || '#f7fafc');
+                root.style.setProperty('--bg-dark', config.darkTheme.background || 'radial-gradient(circle at top, #1c2233, #0e121b 55%, #0b0f16)');
+                root.style.setProperty('--card-dark', config.darkTheme.cardBackground || 'rgba(19, 23, 34, 0.92)');
+                root.style.setProperty('--accent', config.darkTheme.accentColor || '#5fbad8');
+                root.style.setProperty('--text-dark', config.darkTheme.textColor || '#f2f5f8');
             }
         }
 
-        // Initialize page when DOM is loaded
         document.addEventListener('DOMContentLoaded', initPage);
     </script>
 </body>
