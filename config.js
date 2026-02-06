@@ -1,12 +1,12 @@
 const config = {
     // USER INFORMATION
     user: {
-        name: "Your Name",
-        handle: "@yourhandle",
-        status: "Disponible",
-        tagline: "Creative dev building Discord-inspired experiences.",
-        avatar: "https://placehold.co/150x150/0f172a/ffffff?text=Avatar&font=roboto",
-        banner: "https://placehold.co/1200x400/1f2937/93c5fd?text=Banner"
+        name: "Exemple Name",
+        handle: "@exemplehandlename",
+        status: "Online",
+        tagline: "This is an example tagline.",
+        avatar: "./src/img/avatar.png",
+        banner: "./src/img/banner.png"
     },
 
     // SOCIAL NETWORKS (Discord badges replaced by socials)
@@ -43,28 +43,22 @@ const config = {
     // PROJECTS
     projects: [
         {
-            title: "Discord Profile Kit",
-            description: "Custom UI blocks for Discord-inspired profiles.",
-            link: "https://example.com/project-1",
-            tags: ["UI", "Design"]
+            title: "Exemple",
+            description: "This is an example project.",
+            link: "https://example.com/",
+            tags: ["Exemple"]
         },
         {
-            title: "Streaming Overlay",
-            description: "Minimal overlay pack with alerts and widgets.",
-            link: "https://example.com/project-2",
-            tags: ["OBS", "Branding"]
+            title: "Exemple",
+            description: "This is an example project.",
+            link: "https://example.com/",
+            tags: ["Exemple"]
         },
         {
-            title: "Community Landing",
-            description: "Single page site for a gaming community.",
-            link: "https://example.com/project-3",
-            tags: ["Web", "Community"]
-        },
-        {
-            title: "Portfolio",
-            description: "All of my recent client work and case studies.",
-            link: "https://example.com/portfolio",
-            tags: ["Case Studies"]
+            title: "Exemple",
+            description: "This is an example project.",
+            link: "https://example.com/",
+            tags: ["Exemple"]
         }
     ],
 
