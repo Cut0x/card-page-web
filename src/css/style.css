@@ -5,19 +5,19 @@
 }
 
 :root {
-    --bg-light: radial-gradient(circle at top, #f5f7fb, #e7ecf5 55%, #dfe6f2);
-    --bg-dark: radial-gradient(circle at top, #1c2233, #0e121b 55%, #0b0f16);
-    --card-light: rgba(255, 255, 255, 0.88);
-    --card-dark: rgba(19, 23, 34, 0.92);
+    --bg-light: #f2f3f5;
+    --bg-dark: #1e1f22;
+    --card-light: #ffffff;
+    --card-dark: #2b2d31;
     --text-light: #1c2233;
     --text-dark: #f2f5f8;
     --text-muted-light: #5f6b82;
     --text-muted-dark: #b8c0d4;
-    --accent: #5fbad8;
-    --accent-strong: #3c7b97;
-    --stroke-light: rgba(17, 24, 39, 0.1);
-    --stroke-dark: rgba(255, 255, 255, 0.08);
-    --shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+    --accent: #5865f2;
+    --accent-strong: #3f4fd6;
+    --stroke-light: rgba(17, 24, 39, 0.08);
+    --stroke-dark: rgba(255, 255, 255, 0.06);
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] {
@@ -49,56 +49,6 @@ body {
     overflow-x: hidden;
 }
 
-.ambient {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(0px);
-    opacity: 0.35;
-    animation: drift 14s ease-in-out infinite;
-}
-
-.orb-one {
-    width: 360px;
-    height: 360px;
-    background: radial-gradient(circle, rgba(95, 186, 216, 0.5), transparent 65%);
-    top: -120px;
-    left: -80px;
-}
-
-.orb-two {
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, rgba(122, 139, 255, 0.35), transparent 65%);
-    bottom: -140px;
-    right: -100px;
-    animation-delay: 3s;
-}
-
-.orb-three {
-    width: 260px;
-    height: 260px;
-    background: radial-gradient(circle, rgba(255, 173, 86, 0.3), transparent 60%);
-    top: 40%;
-    right: 10%;
-    animation-delay: 6s;
-}
-
-@keyframes drift {
-    0%, 100% {
-        transform: translateY(0px) translateX(0px);
-    }
-    50% {
-        transform: translateY(-30px) translateX(20px);
-    }
-}
-
 .app {
     width: min(880px, 100%);
 }
@@ -107,10 +57,10 @@ body {
     position: relative;
     background: var(--card, var(--card-dark));
     border: 1px solid var(--stroke, var(--stroke-dark));
-    border-radius: 28px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(18px);
+    backdrop-filter: none;
     animation: lift 0.7s ease;
 }
 
@@ -131,7 +81,7 @@ body {
     right: 18px;
     width: 38px;
     height: 38px;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid var(--stroke, var(--stroke-dark));
     background: rgba(15, 23, 42, 0.6);
     color: #f8fafc;
@@ -152,39 +102,52 @@ body {
 }
 
 .banner {
-    height: 200px;
+    height: 280px;
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 0;
 }
 
 .banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.05));
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.6) 100%),
+        linear-gradient(0deg, rgba(43, 45, 49, 1) 0%, rgba(43, 45, 49, 0.0) 70%);
+    z-index: 1;
 }
 
 .profile-top {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 12px;
     padding: 0 36px 22px;
-    align-items: flex-end;
-    margin-top: -54px;
+    align-items: flex-start;
+    margin-top: -111px;
+    background: var(--card, var(--card-dark));
+    position: relative;
+    z-index: 2;
 }
 
 .avatar {
     width: 120px;
     height: 120px;
-    border-radius: 26px;
-    border: 4px solid var(--card, var(--card-dark));
+    border-radius: 20px;
+    border: 6px solid var(--card, var(--card-dark));
     object-fit: cover;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    margin-top: -47px;
+    position: relative;
+    z-index: 3;
+    order: 1;
 }
 
 .identity {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    order: 2;
 }
 
 .name {
@@ -208,7 +171,7 @@ body {
 }
 
 .panel {
-    padding: 22px 36px;
+    padding: 18px 36px;
     border-top: 1px solid var(--stroke, var(--stroke-dark));
 }
 
@@ -236,13 +199,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 14px;
-    border-radius: 999px;
+    padding: 8px;
+    border-radius: 10px;
     border: 1px solid var(--stroke, var(--stroke-dark));
     color: var(--text, var(--text-dark));
     text-decoration: none;
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
@@ -276,11 +239,11 @@ body {
 
 .project-card {
     border: 1px solid var(--stroke, var(--stroke-dark));
-    border-radius: 18px;
+    border-radius: 14px;
     padding: 16px 18px 18px;
     text-decoration: none;
     color: var(--text, var(--text-dark));
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.08);
     min-height: 140px;
     display: flex;
     flex-direction: column;
@@ -291,7 +254,7 @@ body {
 .project-card:hover {
     transform: translateY(-4px);
     border-color: rgba(95, 186, 216, 0.6);
-    background: rgba(95, 186, 216, 0.12);
+    background: rgba(88, 101, 242, 0.14);
 }
 
 .project-head {
@@ -310,6 +273,23 @@ body {
     font-size: 14px;
     color: var(--text-muted, var(--text-muted-dark));
     line-height: 1.5;
+}
+
+.footer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted, var(--text-muted-dark));
+}
+
+.footer a {
+    color: var(--text, var(--text-dark));
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    color: var(--accent);
 }
 
 .tags {
@@ -342,7 +322,7 @@ body {
     .profile-top {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: -64px;
+        margin-top: -56px;
     }
 
     .avatar {
@@ -365,6 +345,6 @@ body {
     }
 
     .banner {
-        height: 170px;
+        height: 250px;
     }
 }
