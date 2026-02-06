@@ -35,17 +35,13 @@
                         <span class="dot">•</span>
                         <span class="status" id="status"></span>
                     </div>
+                    <div class="social-badges" id="socialLinks"></div>
                 </div>
             </div>
 
             <section class="panel about">
                 <h2>About</h2>
                 <p class="tagline" id="tagline"></p>
-            </section>
-
-            <section class="panel socials">
-                <h2>Socials</h2>
-                <div class="social-badges" id="socialLinks"></div>
             </section>
 
             <section class="panel projects">
@@ -56,6 +52,9 @@
                 <div class="project-grid" id="projectsGrid"></div>
             </section>
         </section>
+        <footer class="footer">
+            Created by <a href="https://valloic.fr" target="_blank" rel="noopener noreferrer">Loïc</a>
+        </footer>
     </main>
 
     <script src="./config.js"></script>
@@ -84,7 +83,7 @@
                 link.rel = 'noopener noreferrer';
                 link.className = 'social-badge';
                 link.title = social.name;
-                link.innerHTML = `<i class="bi ${social.icon}"></i><span>${social.name}</span>`;
+                link.innerHTML = `<i class="bi ${social.icon}"></i>`;
                 socialContainer.appendChild(link);
             });
 
